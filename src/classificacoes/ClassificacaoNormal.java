@@ -3,20 +3,23 @@ package classificacoes;
 import abstrata.Classificacao;
 
 public class ClassificacaoNormal extends Classificacao {
-    private static final int NORMAL = 0;
+    private static final int CÓDIGO_DE_PREÇO_NORMAL = 0;
+    private static final double PREÇO_DIÁRIO_BASE = 2.0;
+    private static final double PREÇO_DIÁRIO_ADICIONAL = 1.5;
 
     @Override
     public int getCódigoDePreço() {
-        return NORMAL;
+        return CÓDIGO_DE_PREÇO_NORMAL;
     }
 
     @Override
     public double getValorDoAluguel(int diasAlugados) {
-        double preco = 0.0;
-        preco += 2.0;
+        double valorDoAluguel = PREÇO_DIÁRIO_BASE;
+
         if (diasAlugados > 2) {
-            preco += (diasAlugados - 2) * 1.5;
+            valorDoAluguel += (diasAlugados - 2) * PREÇO_DIÁRIO_ADICIONAL;
         }
-        return preco;
+
+        return valorDoAluguel;
     }
 }

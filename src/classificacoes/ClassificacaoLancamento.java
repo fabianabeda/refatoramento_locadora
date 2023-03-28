@@ -3,16 +3,18 @@ package classificacoes;
 import abstrata.Classificacao;
 
 public class ClassificacaoLancamento extends Classificacao {
-    private static final int LANCAMENTO = 1;
+    private static final int CÓDIGO_DE_PREÇO_LANÇAMENTO = 1;
+    private static final double PREÇO_DIÁRIO = 3.0;
 
     @Override
     public int getCódigoDePreço() {
-        return LANCAMENTO;
+        return CÓDIGO_DE_PREÇO_LANÇAMENTO;
     }
 
     @Override
     public double getValorDoAluguel(int diasAlugados) {
-        return diasAlugados * 3.00;
+        double valorDoAluguel = diasAlugados * PREÇO_DIÁRIO;
+        return valorDoAluguel;
     }
 
     @Override
