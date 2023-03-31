@@ -4,6 +4,7 @@ public class ClassificacaoInfantil extends Classificacao {
     private static final int CÓDIGO_DE_PREÇO_INFANTIL = 2;
     private static final double PREÇO_DIÁRIO = 1.5;
     private static final double PREÇO_DIÁRIO_ADICIONAL = 1.5;
+    private static final double PREÇO_DIÁRIO_ADICIONAL = 1.5;
 
     @Override
     public int getCódigoDePreço() {
