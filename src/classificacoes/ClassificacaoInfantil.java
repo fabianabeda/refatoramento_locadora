@@ -3,8 +3,7 @@ package classificacoes;
 public class ClassificacaoInfantil extends Classificacao {
     private static final int CÓDIGO_DE_PREÇO_INFANTIL = 2;
     private static final double PREÇO_DIÁRIO = 1.5;
-    private static final double PREÇO_DIÁRIO_ADICIONAL = 1.5;
-    private static final double PREÇO_DIÁRIO_ADICIONAL = 1.5;
+    private static final double PREÇO_DIARIO_ADICIONAL = 1.5;
 
     @Override
     public int getCódigoDePreço() {
@@ -17,7 +16,7 @@ public class ClassificacaoInfantil extends Classificacao {
         valorDoAluguel += PREÇO_DIÁRIO;
 
         if (diasAlugados > 3) {
-            valorDoAluguel += (diasAlugados - 3) * PREÇO_DIÁRIO_ADICIONAL;
+            valorDoAluguel += (diasAlugados - 3) * PREÇO_DIARIO_ADICIONAL;
         }
         return valorDoAluguel;
     }
