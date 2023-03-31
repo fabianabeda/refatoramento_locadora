@@ -1,6 +1,6 @@
 package locadora;
 
-import abstrata.Classificacao;
+import classificacoes.Classificacao;
 import classificacoes.ClassificacaoInfantil;
 import classificacoes.ClassificacaoLancamento;
 import classificacoes.ClassificacaoNormal;
@@ -42,4 +42,5 @@ public class DVD implements Alugavel {
 	public int getPontosDeAlugadorFrequente(int diasAlugados) {
 		return classificacao.getPontosDeAlugadorFrequente(diasAlugados);
 	}
+
 }

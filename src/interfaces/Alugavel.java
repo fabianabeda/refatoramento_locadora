@@ -6,4 +6,5 @@ public interface Alugavel {
     double getValorDoAluguel(int diasAlugados);
 
     int getPontosDeAlugadorFrequente(int diasAlugados);
+    
 }

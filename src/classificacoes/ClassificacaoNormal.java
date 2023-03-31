@@ -1,10 +1,8 @@
 package classificacoes;
 
-import abstrata.Classificacao;
-
 public class ClassificacaoNormal extends Classificacao {
     private static final int CÓDIGO_DE_PREÇO_NORMAL = 0;
-    private static final double PREÇO_DIÁRIO_BASE = 2.0;
+    private static final double PREÇO_DIÁRIO = 2.0;
     private static final double PREÇO_DIÁRIO_ADICIONAL = 1.5;
 
     @Override
@@ -14,12 +12,12 @@ public class ClassificacaoNormal extends Classificacao {
 
     @Override
     public double getValorDoAluguel(int diasAlugados) {
-        double valorDoAluguel = PREÇO_DIÁRIO_BASE;
+        double valorDoAluguel = 0.0;
+        valorDoAluguel = PREÇO_DIÁRIO;
 
         if (diasAlugados > 2) {
             valorDoAluguel += (diasAlugados - 2) * PREÇO_DIÁRIO_ADICIONAL;
         }
-
         return valorDoAluguel;
     }
 }
