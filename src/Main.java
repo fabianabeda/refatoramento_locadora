@@ -21,6 +21,8 @@ public class Main {
 		c1.adicionaAluguel(new Aluguel(new Jogo("Grand Theft Auto V", TipoConsole.PS5, 4), 5));
 
 
-		System.out.println(c1.extrato(1));
+		System.out.println(c1.extrato("2"));
+		
+		System.out.println(c1.extrato("1"));
 	}
 }

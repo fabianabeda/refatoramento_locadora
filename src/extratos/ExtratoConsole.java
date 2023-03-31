@@ -9,41 +9,32 @@ import locadora.Aluguel;
 public class ExtratoConsole extends Extrato{
 
     @Override
-    public String send(List<Aluguel> midiasAlugadas) {
+    public String criarExtrato(List<Aluguel> midiasAlugadas, int pontosDeAlugadorFrequente, String nome, double valorTotal) {
 		
         final String fimDeLinha = System.getProperty("line.separator");
         Iterator<Aluguel> alugueis = midiasAlugadas.iterator();
         
-        StringBuilder resultado = new StringBuilder("Registro de Alugueis de " + "getNome()" + fimDeLinha);
+        StringBuilder resultado = new StringBuilder("Registro de Alugueis de " + nome + fimDeLinha);
         
         while (alugueis.hasNext()) {
             Aluguel aluguel = alugueis.next();
-
-            switch (aluguel.getClass().getName()) {
-                case "DVD":
-                    
-                    break;
-                case "Jogo":
-                    
-                    break;
-            
-                default:
-                    break;
-            }
-
             
             resultado.append(aluguel.getMidias().getTitulo())
+                    
                     .append(" ")
                     .append(aluguel.getValorDoAluguel())
+                    .append(aluguel.hasConsole() ? aluguel.getMidias().getConsole() : "Não especificado")
                     .append(fimDeLinha);
         }
         
         resultado.append("Valor total pago: R$ ")
-                .append( "getValorTotal()")
+                
+                .append(valorTotal)
                 .append(fimDeLinha)
+                .append("Console: ")
                 .append("Voce acumulou ")
-                .append("getPontosDeAlugadorFrequente()")
-                .append(" pontos de alugador frequente");
+                .append(pontosDeAlugadorFrequente)
+                .append(" pontos de alugador frequente\n");
 
         return resultado.toString();
         

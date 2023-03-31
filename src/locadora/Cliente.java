@@ -24,20 +24,11 @@ public class Cliente {
 		midiasAlugadas.add(aluguel);
 	}
 
-	public void extrato(String codExtrato){
-		switch (codExtrato) {
-			case "1":
-				Extrato extratoConsole = new ExtratoConsole(midiasAlugadas);
-				extratoConsole.send();
-				break;
-			case "2":
-				Extrato extratoHTML = new ExtratoHTML(midiasAlugadas);
-				extratoHTML.send();
-				
-				break;		
-			default:
-				break;
-		}
+	public String extrato(String codExtrato){
+		Extrato extrato = Extrato.selecionarExtrato(codExtrato);
+
+		return extrato.criarExtrato(midiasAlugadas, getPontosDeAlugadorFrequente(), getNome(), getValorTotal());
+		
 	}
 
 	private double getValorTotal() {

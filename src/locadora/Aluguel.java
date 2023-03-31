@@ -35,4 +35,8 @@ public class Aluguel {
 		return alugavel.getTitulo();
 	}
 
+	public boolean hasConsole(){
+		return alugavel.hasConsole();
+	}
+
 }

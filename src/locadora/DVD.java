@@ -4,6 +4,7 @@ import classificacoes.Classificacao;
 import classificacoes.ClassificacaoInfantil;
 import classificacoes.ClassificacaoLancamento;
 import classificacoes.ClassificacaoNormal;
+import classificacoes.TipoConsole;
 import interfaces.Alugavel;
 
 public class DVD implements Alugavel {
@@ -43,4 +44,11 @@ public class DVD implements Alugavel {
 		return classificacao.getPontosDeAlugadorFrequente(diasAlugados);
 	}
 
+	public boolean hasConsole(){
+		return false;
+	}
+
+	public TipoConsole getConsole(){
+		return null;
+	};
 }
