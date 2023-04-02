@@ -15,5 +15,4 @@ public enum TipoConsole {
   public String getTipoConsole(){
     return codTipoConsole;
   }
-  
 }

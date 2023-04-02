@@ -23,15 +23,14 @@ public class ExtratoConsole extends Extrato{
                     
                     .append(" ")
                     .append(aluguel.getValorDoAluguel())
-                    .append(aluguel.hasConsole() ? aluguel.getMidias().getConsole() : "Não especificado")
+                    .append(aluguel.hasConsole() ? " - " + aluguel.getMidias().getConsole() : " - Não especificado")
                     .append(fimDeLinha);
         }
         
-        resultado.append("Valor total pago: R$ ")
+        resultado.append("\nValor total pago: R$ ")
                 
                 .append(valorTotal)
                 .append(fimDeLinha)
-                .append("Console: ")
                 .append("Voce acumulou ")
                 .append(pontosDeAlugadorFrequente)
                 .append(" pontos de alugador frequente\n");

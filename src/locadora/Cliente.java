@@ -10,7 +10,7 @@ import extratos.ExtratoHTML;
 
 public class Cliente {
 	private String nome;
-	private List<Aluguel> midiasAlugadas = new ArrayList<Aluguel>();
+	private List<Aluguel> midiasAlugadas;
 
 	public Cliente(String nome) {
 		this.nome = nome;
@@ -21,14 +21,17 @@ public class Cliente {
 	}
 
 	public void adicionaAluguel(Aluguel aluguel) {
-		midiasAlugadas.add(aluguel);
+		this.midiasAlugadas.add(aluguel);
+	}
+
+	public void setMidiasAlugadas(List<Aluguel> midiasAlugadas) {
+		this.midiasAlugadas = midiasAlugadas;
 	}
 
 	public String extrato(String codExtrato){
 		Extrato extrato = Extrato.selecionarExtrato(codExtrato);
 
-		return extrato.criarExtrato(midiasAlugadas, getPontosDeAlugadorFrequente(), getNome(), getValorTotal());
-		
+		return extrato.criarExtrato(midiasAlugadas, getPontosDeAlugadorFrequente(), getNome(), getValorTotal());	
 	}
 
 	private double getValorTotal() {

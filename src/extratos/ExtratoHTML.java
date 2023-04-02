@@ -17,15 +17,16 @@ public class ExtratoHTML extends Extrato{
             while (alugueis.hasNext()) {
                 Aluguel aluguel = alugueis.next();
                 // mostra valores para este aluguel
-                resultado += aluguel.getMidias().getTitulo() + ": R$ " +
-    
-                        aluguel.getValorDoAluguel() + "<BR>" + fimDeLinha;
+                resultado += aluguel.getMidias().getTitulo() + ": R$ " + aluguel.getValorDoAluguel()
+                + (aluguel.hasConsole() ? " - " + aluguel.getMidias().getConsole() : " - Não especificado") + "<BR>";
+
+                resultado += fimDeLinha;        
             }
-            resultado += "<P>Valor total pago: <EM>R$ " + valorTotal +
+            resultado += "\n<P>Valor total pago: <EM>R$ " + valorTotal +
                     "</EM>" + fimDeLinha;
             resultado += "<P>Voce acumulou <EM>" +
                     pontosDeAlugadorFrequente +
-                    " pontos </EM> de alugador frequente\n";
+                    " pontos </EM> de alugador frequente\n\n";
                     
             return resultado.toString();
         }

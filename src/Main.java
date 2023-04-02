@@ -2,12 +2,17 @@ import locadora.Cliente;
 import locadora.Aluguel;
 import locadora.DVD;
 import locadora.Jogo;
+
+import java.util.ArrayList;
+
 import classificacoes.TipoConsole;
 
 public class Main {
 	
 	public static void main(String[] args) {
 		Cliente c1 = new Cliente("Alex Sandro");
+
+		c1.setMidiasAlugadas( new ArrayList<Aluguel>());
 
 		c1.adicionaAluguel(new Aluguel(new DVD("O Atirador", 0), 10));
 		c1.adicionaAluguel(new Aluguel(new DVD("Luca", 2), 2));
