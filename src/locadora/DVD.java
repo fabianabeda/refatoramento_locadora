@@ -20,8 +20,8 @@ public class DVD implements Alugavel {
 		return titulo;
 	}
 
-	public int getCódigoDePreco() {
-		return classificacao.getCódigoDePreço();
+	public int getCodigoDePreco() {
+		return classificacao.getCodigoDePreco();
 	}
 
 	public void setCodigoDePreco(int codigoDePreco) {

@@ -7,7 +7,7 @@ public class ClassificacaoOnline extends Classificacao {
     private static final int DIAS_NORMAL = 3;
 
     @Override
-    public int getCódigoDePreço() {
+    public int getCodigoDePreco() {
         return CODIGO_DE_PRECO_ONLINE;
     }
 

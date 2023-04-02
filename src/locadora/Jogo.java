@@ -26,8 +26,8 @@ public class Jogo implements Alugavel {
         return tipoConsole;
     }
 
-    public int getCódigoDePreço() {
-        return classificacao.getCódigoDePreço();
+    public int getCodigoDePreco() {
+        return classificacao.getCodigoDePreco();
     }
 
     public void setCodigoDePreco(int codigoDePreco) {

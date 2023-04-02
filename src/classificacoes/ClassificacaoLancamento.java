@@ -1,12 +1,12 @@
 package classificacoes;
 
 public class ClassificacaoLancamento extends Classificacao {
-    private static final int CÓDIGO_DE_PREÇO_LANÇAMENTO = 1;
+    private static final int CODIGO_DE_PRECO_LANCAMENTO = 1;
     private static final double PREÇO_DIÁRIO = 3.0;
 
     @Override
-    public int getCódigoDePreço() {
-        return CÓDIGO_DE_PREÇO_LANÇAMENTO;
+    public int getCodigoDePreco() {
+        return CODIGO_DE_PRECO_LANCAMENTO;
     }
 
     @Override

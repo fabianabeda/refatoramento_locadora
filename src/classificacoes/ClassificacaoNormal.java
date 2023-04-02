@@ -1,22 +1,22 @@
 package classificacoes;
 
 public class ClassificacaoNormal extends Classificacao {
-    private static final int CÓDIGO_DE_PREÇO_NORMAL = 0;
-    private static final double PREÇO_DIÁRIO = 2.0;
-    private static final double PREÇO_DIÁRIO_ADICIONAL = 1.5;
+    private static final int CODIGO_DE_PRECO_NORMAL = 0;
+    private static final double PRECO_DIARIO = 2.0;
+    private static final double PRECO_DIARIO_ADICIONAL = 1.5;
 
     @Override
-    public int getCódigoDePreço() {
-        return CÓDIGO_DE_PREÇO_NORMAL;
+    public int getCodigoDePreco() {
+        return CODIGO_DE_PRECO_NORMAL;
     }
 
     @Override
     public double getValorDoAluguel(int diasAlugados) {
         double valorDoAluguel = 0.0;
-        valorDoAluguel = PREÇO_DIÁRIO;
+        valorDoAluguel = PRECO_DIARIO;
 
         if (diasAlugados > 2) {
-            valorDoAluguel += (diasAlugados - 2) * PREÇO_DIÁRIO_ADICIONAL;
+            valorDoAluguel += (diasAlugados - 2) * PRECO_DIARIO_ADICIONAL;
         }
         return valorDoAluguel;
     }

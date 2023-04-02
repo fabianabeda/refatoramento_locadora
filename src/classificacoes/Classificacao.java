@@ -1,7 +1,7 @@
 package classificacoes;
 
 public abstract class Classificacao {
-    public abstract int getCódigoDePreço();
+    public abstract int getCodigoDePreco();
 
     public abstract double getValorDoAluguel(int diasAlugados);
 
