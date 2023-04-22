@@ -42,4 +42,5 @@ public class DVD implements Alugavel {
 	public int getPontosDeAlugadorFrequente(int diasAlugados) {
 		return classificacao.getPontosDeAlugadorFrequente(diasAlugados);
 	}
+
 }

@@ -1,5 +1,6 @@
 package abstrata;
 
+//classe abstrata
 public abstract class Classificacao {
     public abstract int getCódigoDePreço();
 

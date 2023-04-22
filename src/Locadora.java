@@ -1,6 +1,7 @@
 import locadora.Cliente;
 import locadora.Aluguel;
 import locadora.DVD;
+import locadora.Jogo;
 
 public class Locadora {
 	public static void main(String[] args) {
@@ -12,6 +13,10 @@ public class Locadora {
 		c1.adicionaAluguel(new Aluguel(new DVD("Arremessando Alto", 1), 4));
 		c1.adicionaAluguel(new Aluguel(new DVD("Moana", 2), 10));
 		c1.adicionaAluguel(new Aluguel(new DVD("Uma Noite no Museu", 0), 3));
+
+		c1.adicionaAluguel(new Aluguel(new Jogo("FIFA 22", null, 4), 7));
+		c1.adicionaAluguel(new Aluguel(new Jogo("Resident Evil Village", null, 4), 3));
+		c1.adicionaAluguel(new Aluguel(new Jogo("Grand Theft Auto V", null, 4), 5));
 
 		System.out.println(c1.extrato());
 	}

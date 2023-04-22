@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Cliente {
 	private String nome;
-	private List<Aluguel> dvdsAlugados = new ArrayList<Aluguel>();
+	private List<Aluguel> midiasAlugadas = new ArrayList<Aluguel>();
 
 	public Cliente(String nome) {
 		this.nome = nome;
@@ -17,18 +17,18 @@ public class Cliente {
 	}
 
 	public void adicionaAluguel(Aluguel aluguel) {
-		dvdsAlugados.add(aluguel);
+		midiasAlugadas.add(aluguel);
 	}
 
 	public String extrato() {
 		final String fimDeLinha = System.getProperty("line.separator");
-		Iterator<Aluguel> alugueis = dvdsAlugados.iterator();
+		Iterator<Aluguel> alugueis = midiasAlugadas.iterator();
 		StringBuilder resultado = new StringBuilder("Registro de Alugueis de " + getNome() + fimDeLinha);
 		while (alugueis.hasNext()) {
 			Aluguel aluguel = alugueis.next();
-			resultado.append(aluguel.getDVD().getTitulo())
+			resultado.append(aluguel.getMidias().getTitulo())
 					.append(" ")
-					.append(aluguel.getValorDeUmAluguel())
+					.append(aluguel.getValorDoAluguel())
 					.append(fimDeLinha);
 		}
 		resultado.append("Valor total pago: R$ ")
@@ -43,15 +43,15 @@ public class Cliente {
 
 	public String extratoHTML() {
 		final String fimDeLinha = System.getProperty("line.separator");
-		Iterator<Aluguel> alugueis = dvdsAlugados.iterator();
+		Iterator<Aluguel> alugueis = midiasAlugadas.iterator();
 		String resultado = "<H1>Registro de Alugueis de <EM>" + getNome() +
 				"</EM></H1><P>" + fimDeLinha;
 		while (alugueis.hasNext()) {
-			Aluguel cada = alugueis.next();
+			Aluguel aluguel = alugueis.next();
 			// mostra valores para este aluguel
-			resultado += cada.getDVD().getTitulo() + ": R$ " +
+			resultado += aluguel.getMidias().getTitulo() + ": R$ " +
 
-					cada.getValorDeUmAluguel() + "<BR>" + fimDeLinha;
+					aluguel.getValorDoAluguel() + "<BR>" + fimDeLinha;
 		}
 		resultado += "<P>Valor total pago: <EM>R$ " + getValorTotal() +
 				"</EM>" + fimDeLinha;
@@ -63,15 +63,15 @@ public class Cliente {
 
 	private double getValorTotal() {
 		double valorTotal = 0;
-		for (Aluguel aluguel : dvdsAlugados) {
-			valorTotal += aluguel.getValorDeUmAluguel();
+		for (Aluguel aluguel : midiasAlugadas) {
+			valorTotal += aluguel.getValorDoAluguel();
 		}
 		return valorTotal;
 	}
 
 	private int getPontosDeAlugadorFrequente() {
 		int pontosDeAlugadorFrequente = 0;
-		for (Aluguel aluguel : dvdsAlugados) {
+		for (Aluguel aluguel : midiasAlugadas) {
 			pontosDeAlugadorFrequente += aluguel.getPontosDeAlugadorFrequente();
 		}
 		return pontosDeAlugadorFrequente;

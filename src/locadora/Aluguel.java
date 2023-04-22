@@ -13,7 +13,7 @@ public class Aluguel {
 		this.preco = 0;
 	}
 
-	public Alugavel getDVD() {
+	public Alugavel getMidias() {
 		return alugavel;
 	}
 
@@ -21,13 +21,28 @@ public class Aluguel {
 		return diasAlugado;
 	}
 
-	public double getValorDeUmAluguel() {
-		this.preco = this.getDVD().getValorDoAluguel(this.getDiasAlugado());
+	public enum Console {
+		PS5,
+		Xbox_Series_S,
+		Nintendo_Switch,
+		// outros consoles aqui
+	}
+
+	public double getValorDoAluguel() {
+		this.preco = this.getMidias().getValorDoAluguel(this.getDiasAlugado());
 		return this.preco;
 
 	}
 
 	public int getPontosDeAlugadorFrequente() {
-		return this.getDVD().getPontosDeAlugadorFrequente(this.getDiasAlugado());
+		return this.getMidias().getPontosDeAlugadorFrequente(this.getDiasAlugado());
+	}
+
+	public String getTitulo() {
+		return alugavel.getTitulo();
+	}
+
+	public String getConsole() {
+		return alugavel.getConsole();
 	}
 }
